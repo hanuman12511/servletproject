@@ -9,7 +9,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 
 public class AddProduct extends HttpServlet{
-  public void doPost(HttpServletRequest request,
+  public void service(HttpServletRequest request,
   HttpServletResponse response)
   throws ServletException, IOException {
   response.setContentType("text/html");
@@ -34,7 +34,7 @@ public class AddProduct extends HttpServlet{
 			
 			if(row>0)
 			{
-         out.println(" inser data");
+        response.sendRedirect(request.getContextPath() + "/welcome.jsp");
 			}
   }
   catch(Exception e){

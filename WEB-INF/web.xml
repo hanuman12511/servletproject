@@ -10,6 +10,14 @@
         <servlet-name>servlethome</servlet-name>
         <url-pattern>/home</url-pattern>
     </servlet-mapping>
+     <servlet>
+      <servlet-name>servletindex</servlet-name>
+      <servlet-class>servletclass.Home</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servletindex</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
 
 
 </web-app>
