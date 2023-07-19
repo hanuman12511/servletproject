@@ -18,6 +18,15 @@
         <servlet-name>servletindex</servlet-name>
         <url-pattern>/index</url-pattern>
     </servlet-mapping>
+    <servlet>
+      <servlet-name>AddImage11</servlet-name>
+      <servlet-class>servletclass.AddProduct</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddImage11</servlet-name>
+        <url-pattern>/AddImage1</url-pattern>
+    </servlet-mapping>
+     
 
 
 </web-app>

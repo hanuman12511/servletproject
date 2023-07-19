@@ -14,11 +14,7 @@ public class Home extends HttpServlet{
   throws ServletException, IOException {
   response.setContentType("text/html");
   PrintWriter out = response.getWriter();
-  String name = request.getParameter("uname");
-  out.println("<html>");
-  out.println("<body>");
-  out.println("Thanks  Mr."+ name+"<br>");
-  out.println("</body></html>");
+
  
         response.sendRedirect(request.getContextPath() + "/index.jsp");
 
