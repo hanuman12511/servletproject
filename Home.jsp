@@ -66,7 +66,7 @@ ResultSet resultSet = null;
           <a class="nav-link " href="register" tabindex="-1" aria-disabled="true">register</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="CartServlet" tabindex="-1" aria-disabled="true">Cart</a>
+          <a class="nav-link " href="cartView" tabindex="-1" aria-disabled="true">Cart</a>
         </li>
       </ul>
       <form class="d-flex">

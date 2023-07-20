@@ -88,6 +88,14 @@
         <servlet-name>addtocart1</servlet-name>
         <url-pattern>/addtocart</url-pattern>
     </servlet-mapping>
+     <servlet>
+      <servlet-name>cartView1</servlet-name>
+      <servlet-class>servletclass.CartView</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cartView1</servlet-name>
+        <url-pattern>/cartView</url-pattern>
+    </servlet-mapping>
 
 
 </web-app>

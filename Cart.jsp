@@ -84,38 +84,41 @@ ResultSet resultSet = null;
       </div>
  
     <div class="container ">
+
+
  	<div class="row ">
     	
     	
-			
+	<div class="col ">
+    	
+ 			
 
 <% 
 String path=request.getServletContext().getRealPath("images");
 System.out.print(path);
-%>
 
-
-
-
-<%
 
 try{
 connection = DriverManager.getConnection(connectionUrl+database, userid, password);
 statement=connection.createStatement();
-String sql ="select pid from addtocart";
+String sql =" select *from  addtocart inner join product on addtocart.pid=product.id;";
 resultSet = statement.executeQuery(sql);
 while(resultSet.next()){
 	
 int pid=resultSet.getInt("pid");
+String image=resultSet.getString("imagename");
 %>
-<p>data</p>
-<div class=" col-lg-4">
-<a href="SingleProduct?id=<%=pid %>">
-Cart
-<%=pid %>
+<div style="width: max-content; background-color: aquamarine;margin-top: 10px;padding: 10px;">
+<a href="SingleProduct?id=<%=pid %>" style="text-decoration: none;">
+  
+      <img src="images/<%=image %>" style="width:100px"/>
+    </a>
+  <span><%=resultSet.getString("name") %></span>
+  <span>Rate:=<%=resultSet.getString("rate") %>/Rs.</span>
+<input type="submit" value="-"><span><%=resultSet.getInt("qty")%></span><input type="submit" value="+">
 
-</a>
 </div>
+
 
 <%
 }
@@ -126,8 +129,11 @@ e.printStackTrace();
 %>
 
 </div>
+<div class="col" style="background-color: aqua; height: 300px; position: fixed;width: 400px;right:5%;top:24%">
 
- 
+</div>
+
+ </div>
     
     
     </div>
