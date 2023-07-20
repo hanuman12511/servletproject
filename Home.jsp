@@ -109,7 +109,7 @@ int pid=resultSet.getInt("id");
 %>
 
 <div class=" col-lg-4">
-<a href="SingleProduct?id=<%=pid %>">
+<a href="singleproduct?id=<%=pid %>">
 <img src="images/<%=resultSet.getString("imagename") %>" style="width:100px"/>
 <p><%=resultSet.getString("name") %></p>
 <p><%=resultSet.getString("rate") %></p>

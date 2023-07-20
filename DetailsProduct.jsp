@@ -19,6 +19,6 @@ Object img =request.getAttribute("imagename");
 
 Object pid = request.getAttribute("id");
 %>
-<a href="Addtocart?id=<%=  pid%>">Add To cart</a>
+<a href="addtocart?id=<%=  pid%>">Add To cart</a>
 </body>
 </html>

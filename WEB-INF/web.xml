@@ -72,5 +72,22 @@
         <url-pattern>/homepage</url-pattern>
     </servlet-mapping>
 
+     <servlet>
+      <servlet-name>singleproduct1</servlet-name>
+      <servlet-class>servletclass.SingleProduct</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>singleproduct1</servlet-name>
+        <url-pattern>/singleproduct</url-pattern>
+    </servlet-mapping>
+     <servlet>
+      <servlet-name>addtocart1</servlet-name>
+      <servlet-class>servletclass.AddCart</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addtocart1</servlet-name>
+        <url-pattern>/addtocart</url-pattern>
+    </servlet-mapping>
+
 
 </web-app>
