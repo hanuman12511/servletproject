@@ -8,11 +8,11 @@
 </head>
 <body>
  <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-  <form action="AddProduct" method="Post">
+  <form action="AddProduct" method="Get">
     <button class="nav-link active" type="submit" >Add Product</button>
     </form>
-    <form action="SellProduct"  method="Post">
-    <button class="nav-link active" type="submit" >Sell Product</button>
+    <form action="SellProduct"  method="Get">
+    <button class="nav-link active" type="submit" >Show Product</button>
     </form>
     
       </div>
