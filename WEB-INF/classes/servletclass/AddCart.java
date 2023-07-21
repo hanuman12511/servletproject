@@ -81,8 +81,8 @@ String prate=null;
 					
 					 request.setAttribute("message", "Image added into database successfully.");
 
-					 // response.sendRedirect("Home.jsp");
-						request.getRequestDispatcher("Home.jsp").forward(request, response);
+					 response.sendRedirect("Home.jsp");
+						//request.getRequestDispatcher("Home.jsp").forward(request, response);
 				}
 				
 			}
@@ -103,8 +103,8 @@ String prate=null;
 				
 				 request.setAttribute("message", "Image added into database successfully.");
 
-				 // response.sendRedirect("Home.jsp");
-					request.getRequestDispatcher("Home.jsp").forward(request, response);
+				  response.sendRedirect("Home.jsp");
+					//request.getRequestDispatcher("Home.jsp").forward(request, response);
 			}
 			
 			else

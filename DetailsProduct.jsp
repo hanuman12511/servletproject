@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+    <div>
+        <jsp:include page ="Headerbar.jsp" />
+    
 <% 
 String path=request.getServletContext().getRealPath("images");
 System.out.print(path);
@@ -20,5 +23,7 @@ Object img =request.getAttribute("imagename");
 Object pid = request.getAttribute("id");
 %>
 <a href="addtocart?id=<%=  pid%>">Add To cart</a>
+<jsp:include page ="footerbar.jsp" />
+    </div>
 </body>
 </html>

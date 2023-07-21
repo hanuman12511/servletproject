@@ -34,49 +34,7 @@ ResultSet resultSet = null;
     <title>Hello, world!</title>
   </head>
   <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar scroll</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarScroll">
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Link
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="login" tabindex="-1" aria-disabled="true">login</a>
-        </li>
-         <li class="nav-item">
-          <a class="nav-link " href="register" tabindex="-1" aria-disabled="true">register</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="CartServlet" tabindex="-1" aria-disabled="true">Cart</a>
-        </li>
-      </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-      
-    </div>
-  </div>
-</nav>
+    <jsp:include page ="Headerbar.jsp" />
 <div class="d-flex align-items-start">
   <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
 
@@ -96,7 +54,7 @@ ResultSet resultSet = null;
 <% 
 String path=request.getServletContext().getRealPath("images");
 System.out.print(path);
-
+int total =0;
 
 try{
 connection = DriverManager.getConnection(connectionUrl+database, userid, password);
@@ -107,6 +65,7 @@ while(resultSet.next()){
 	
 int pid=resultSet.getInt("pid");
 String image=resultSet.getString("imagename");
+total+=Integer.parseInt( resultSet.getString("rate"));
 %>
 <div style="width: max-content; background-color: aquamarine;margin-top: 10px;padding: 10px;">
 <a href="SingleProduct?id=<%=pid %>" style="text-decoration: none;">
@@ -130,7 +89,8 @@ e.printStackTrace();
 
 </div>
 <div class="col" style="background-color: aqua; height: 300px; position: fixed;width: 400px;right:5%;top:24%">
-
+<p>Total Pay: <%=total%>/Rs.</p>
+<input type="submit" value="Order Now">
 </div>
 
  </div>
@@ -139,7 +99,7 @@ e.printStackTrace();
     </div>
     
   </div>
-
+  <jsp:include page ="footerbar.jsp" />
   
     </body>
 </html>

@@ -113,6 +113,14 @@
         <servlet-name>updateproduct1</servlet-name>
         <url-pattern>/updateproduct</url-pattern>
     </servlet-mapping>
+    <servlet>
+      <servlet-name>updateproduct11</servlet-name>
+      <servlet-class>servletclass.ProductUpdateData</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updateproduct11</servlet-name>
+        <url-pattern>/updateproductdata</url-pattern>
+    </servlet-mapping>
 
 
 </web-app>
