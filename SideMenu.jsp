@@ -14,7 +14,9 @@
     <form action="Showproduct"  method="Get">
     <button class="nav-link active mt-3" type="submit" >Show Product</button>
     </form>
-    
+    <form action="productstatus"  method="Get">
+      <button class="nav-link active mt-3" type="submit" >Product Status</button>
+      </form>
       </div>
 </body>
 </html>

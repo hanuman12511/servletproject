@@ -62,7 +62,7 @@ ResultSet resultSet = null;
   			<input type="submit" class="form-control" id="formGroupExampleInput2" value="Add Product">
 			</div>
 		</form>
-		
+		<!-- 
 		
 <table border="1" width="500px">
 <tr>
@@ -103,7 +103,7 @@ connection.close();
 e.printStackTrace();
 }
 %>
-</table> 
+</table>  -->
     </div>
    </div>
 </div>
