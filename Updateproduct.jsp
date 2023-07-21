@@ -8,5 +8,9 @@
 </head>
 <body>
 <h1>update page</h1>
+<%
+int id = (int) request.getAttribute("id");
+%>
+<p><%=id%></p>
 </body>
 </html>

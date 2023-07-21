@@ -34,7 +34,7 @@ ResultSet resultSet = null;
     <title>Hello, world!</title>
   </head>
   <body>
- 
+	<jsp:include page ="AdminTop.jsp" />
 <div class="d-flex align-items-start">
  <jsp:include page ="SideMenu.jsp" />
   <div class="tab-content" id="v-pills-tabContent">
@@ -94,8 +94,7 @@ int pid=resultSet.getInt("id");
 <td><img src="images/<%=resultSet.getString("imagename") %>" style="width:100px"/></td>
 <td><%=resultSet.getString("name") %></td>
 <td><%=resultSet.getString("rate") %></td>
-<td> <a href="DeleteProduct?id=<%=pid %>">Delete</a></td>
-<td> <a href="UpdateProduct?id=<%=pid %>">Edit</a></td>
+
 </tr>
 <%
 }

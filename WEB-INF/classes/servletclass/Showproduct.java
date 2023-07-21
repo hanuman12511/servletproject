@@ -12,14 +12,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
-public class SellProduct  extends HttpServlet {
+public class Showproduct  extends HttpServlet {
 	     
-    public SellProduct() {
+    public Showproduct() {
         super();
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/Sellproduct.jsp").forward(request, response);
+        request.getRequestDispatcher("/Showproduct.jsp").forward(request, response);
     }
 
 }

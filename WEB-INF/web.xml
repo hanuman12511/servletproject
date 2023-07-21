@@ -37,12 +37,12 @@
     </servlet-mapping>
 
      <servlet>
-      <servlet-name>SellProduct1</servlet-name>
-      <servlet-class>servletclass.SellProduct</servlet-class>
+      <servlet-name>Showproduct1</servlet-name>
+      <servlet-class>servletclass.Showproduct</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>SellProduct1</servlet-name>
-        <url-pattern>/SellProduct</url-pattern>
+        <servlet-name>Showproduct1</servlet-name>
+        <url-pattern>/Showproduct</url-pattern>
     </servlet-mapping>
 
        <servlet>
@@ -95,6 +95,23 @@
     <servlet-mapping>
         <servlet-name>cartView1</servlet-name>
         <url-pattern>/cartView</url-pattern>
+    </servlet-mapping>
+ <servlet>
+      <servlet-name>deleteproduct1</servlet-name>
+      <servlet-class>servletclass.DeleteProduct</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteproduct1</servlet-name>
+        <url-pattern>/deleteproduct</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+      <servlet-name>updateproduct1</servlet-name>
+      <servlet-class>servletclass.ProductUpdate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>updateproduct1</servlet-name>
+        <url-pattern>/updateproduct</url-pattern>
     </servlet-mapping>
 
 

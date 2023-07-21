@@ -14,9 +14,10 @@ public class ProductUpdate extends HttpServlet{
   throws ServletException, IOException {
   response.setContentType("text/html");
   PrintWriter out = response.getWriter();
-  out.println("<html>");
-  out.println("<body>");
-  out.println("<h1>productUpdate</h1> ");
-  out.println("</body></html>");
+  out.println("update product");
+  int  id=Integer.parseInt(request.getParameter("id"));
+  request.setAttribute("id", id);
+  request.getRequestDispatcher("/Updateproduct.jsp").forward(request, response);
+ 
 }
 }
